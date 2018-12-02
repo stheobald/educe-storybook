@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+			"helpers/*": ["./shared/helpers/*"],
+			"shared/*": ["./shared/*"],
+			"components/*": ["./screens/components/*"],
+      "screens/*": ["./screens/*"],
+      "storybook/*": ["./storybook/*"]
+    }
+  },
+  "exclude": ["node_modules", "**/node_modules/*", "dist",".next"]
+}

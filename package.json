@@ -1,0 +1,73 @@
+{
+	"name": "educe-storybook",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next dev",
+		"storybook": "start-storybook -p 6006 -s ./ -c storybook",
+		"build-storybook": "build-storybook",
+		"lint": "eslint .",
+		"prettier": "prettier --write {screens,storybook,pages}/**/*.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"babel": {
+		"presets": [
+			"@babel/env",
+			"next/babel"
+		],
+		"plugins": [
+			"syntax-export-extensions",
+			"@babel/proposal-export-default-from",
+			[
+				"module-resolver",
+				{
+					"root": [
+						"/shared/",
+						"./"
+					],
+					"alias": {
+						"helpers": "./shared/helpers/",
+						"shared": "./shared/",
+						"screens": "./screens/",
+						"components": "./screens/components/"
+					}
+				}
+			]
+		]
+	},
+	"dependencies": {
+		"eslint": "^5.7.0",
+		"leveldown": "^4.0.1",
+		"net": "^1.0.2",
+		"next": "^7.0.2",
+		"nprogress": "^0.2.0",
+		"react": "^16.5.2",
+		"react-addons-update": "^15.6.2",
+		"react-bootstrap": "^0.32.4",
+		"react-dom": "^16.5.2",
+		"react-fontawesome": "^1.6.1",
+		"styled-components": "^4.0.0",
+		"uuid": "^3.3.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.1.2",
+		"@babel/core": "^7.1.2",
+		"babel-plugin-auto-import": "^0.9.3",
+		"@babel/plugin-proposal-export-default-from": "^7.0.0",
+		"@storybook/addon-actions": "^4.0.0-alpha.25",
+		"@storybook/addon-links": "^4.0.0-alpha.25",
+		"@storybook/addons": "^4.0.0-alpha.25",
+		"@storybook/react": "^4.0.0-alpha.25",
+		"babel-eslint": "^10.0.1",
+		"babel-loader": "^8.0.4",
+		"babel-plugin-module-resolver": "^3.1.1",
+		"babel-plugin-syntax-export-extensions": "^6.13.0",
+		"babel-preset-env": "^1.7.0",
+		"eslint-config-prettier": "^3.1.0",
+		"eslint-plugin-prettier": "^3.0.0",
+		"eslint-plugin-react": "^7.11.1",
+		"prettier": "^1.14.3"
+	}
+}
